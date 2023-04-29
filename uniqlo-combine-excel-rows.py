@@ -7,7 +7,9 @@ pathToCsv = os.getcwd()+"/dropCsvHere/"
 
 # user input
 userinput_wantSum = input("Do you want to sum a particular column? Press 1 for yes, press anything for no.")
-userinput_columnNumber = input("Which column number do you want to sum? If first row, press 1.")
+
+if userinput_wantSum == '1':
+    userinput_columnNumber = input("Which column number do you want to sum? If first row, press 1.")
 
 
 
@@ -32,3 +34,5 @@ combined_df = pd.concat(dfs, ignore_index=True)
 
 # Write the combined dataframe to a new CSV file
 combined_df.to_csv('combined.csv', index=False)
+
+print('combined.csv is created. All hail lord Fendy')
