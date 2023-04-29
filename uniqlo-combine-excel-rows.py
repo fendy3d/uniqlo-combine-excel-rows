@@ -26,7 +26,7 @@ for csv_file in csv_files:
 
 # Calculate the sum
 if userinput_wantSum == '1':
-    column_name = df.columns[userinput_columnNumber]
+    column_name = df.columns[int(userinput_columnNumber)]
     sum_of_column = df.iloc[:, int(userinput_columnNumber)-1].sum()
 
     print("The sum of column {}: {}".format(column_name, sum_of_column))
